@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bwh_service_util</artifactId>
+    <artifactId>bwh_common_service_util</artifactId>
     <packaging>jar</packaging>
     <description>bwh_service_util Service服务层公共包</description>
 

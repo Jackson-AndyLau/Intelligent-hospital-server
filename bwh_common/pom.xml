@@ -16,7 +16,7 @@
 
     <modules>
         <module>bwh_common_util</module>
-        <module>bwh_service_util</module>
+        <module>bwh_common_service_util</module>
     </modules>
 
     <dependencies>
