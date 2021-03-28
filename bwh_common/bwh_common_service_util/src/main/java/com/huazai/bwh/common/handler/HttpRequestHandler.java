@@ -1,4 +1,4 @@
-package com.huazai.bwh.common.helper;
+package com.huazai.bwh.common.handler;
 
 import com.alibaba.fastjson.JSONObject;
 import com.huazai.bwh.common.utils.HttpUtil;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 @Slf4j
-public class HttpRequestHelper {
+public class HttpRequestHandler {
 
     public static void main(String[] args) {
         Map<String, Object> paramMap = new HashMap<>();

@@ -1,6 +1,6 @@
 package com.huazai.bwh.common.utils;
 
-import com.huazai.bwh.common.helper.JwtHelper;
+import com.huazai.bwh.common.handler.JwtHelper;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -1,4 +1,4 @@
-package com.huazai.bwh.common.helper;
+package com.huazai.bwh.common.handler;
 
 import io.jsonwebtoken.*;
 import org.springframework.util.StringUtils;
