@@ -13,6 +13,7 @@
 
     <modules>
         <module>bwh_common</module>
+        <module>bwh_model</module>
     </modules>
 
     <parent>
