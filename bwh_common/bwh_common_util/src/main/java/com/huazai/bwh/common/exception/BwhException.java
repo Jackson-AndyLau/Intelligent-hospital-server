@@ -4,8 +4,10 @@ import com.huazai.bwh.common.result.ResultCodeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 
+@EqualsAndHashCode(callSuper = false)
 @Data
 @ApiModel(value = "自定义全局异常类")
 public class BwhException extends RuntimeException {
