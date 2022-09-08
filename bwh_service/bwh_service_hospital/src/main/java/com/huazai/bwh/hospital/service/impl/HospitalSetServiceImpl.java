@@ -48,6 +48,7 @@ public class HospitalSetServiceImpl extends ServiceImpl<HospitalSetMapper, Hospi
     @Override
     public void deleteHospitalSetById(String id) throws BwhException {
 
+
         this.hospitalSetMapper.deleteById(id);
     }
 
