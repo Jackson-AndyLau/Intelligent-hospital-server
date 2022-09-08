@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel(value = "全局统一返回实体")
-public class Result<T> {
+public class JSONResult<T> {
 
     @ApiModelProperty(value = "状态码")
     private Integer code;
@@ -20,32 +20,32 @@ public class Result<T> {
     @ApiModelProperty(value = "数据")
     private T data;
 
-    public Result() {
+    public JSONResult() {
     }
 
-    protected static <T> Result<T> build(T data) {
-        Result<T> result = new Result<T>();
+    protected static <T> JSONResult<T> build(T data) {
+        JSONResult<T> result = new JSONResult<T>();
         if (data != null)
             result.setData(data);
         return result;
     }
 
-    public static <T> Result<T> build(T body, ResultCodeEnum resultCodeEnum) {
-        Result<T> result = build(body);
+    public static <T> JSONResult<T> build(T body, ResultCodeEnum resultCodeEnum) {
+        JSONResult<T> result = build(body);
         result.setCode(resultCodeEnum.getCode());
         result.setMessage(resultCodeEnum.getMessage());
         return result;
     }
 
-    public static <T> Result<T> build(Integer code, String message) {
-        Result<T> result = build(null);
+    public static <T> JSONResult<T> build(Integer code, String message) {
+        JSONResult<T> result = build(null);
         result.setCode(code);
         result.setMessage(message);
         return result;
     }
 
-    public static <T> Result<T> ok() {
-        return Result.ok(null);
+    public static <T> JSONResult<T> success() {
+        return JSONResult.success(null);
     }
 
     /**
@@ -55,13 +55,13 @@ public class Result<T> {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> ok(T data) {
-        Result<T> result = build(data);
+    public static <T> JSONResult<T> success(T data) {
+        JSONResult<T> result = build(data);
         return build(data, ResultCodeEnum.SUCCESS);
     }
 
-    public static <T> Result<T> fail() {
-        return Result.fail(null);
+    public static <T> JSONResult<T> failure() {
+        return JSONResult.failure(null);
     }
 
     /**
@@ -71,22 +71,22 @@ public class Result<T> {
      * @param <T>
      * @return
      */
-    public static <T> Result<T> fail(T data) {
-        Result<T> result = build(data);
+    public static <T> JSONResult<T> failure(T data) {
+        JSONResult<T> result = build(data);
         return build(data, ResultCodeEnum.FAIL);
     }
 
-    public Result<T> message(String msg) {
+    public JSONResult<T> message(String msg) {
         this.setMessage(msg);
         return this;
     }
 
-    public Result<T> code(Integer code) {
+    public JSONResult<T> code(Integer code) {
         this.setCode(code);
         return this;
     }
 
-    public boolean isOk() {
+    public boolean isSuccess() {
         if (this.getCode().intValue() == ResultCodeEnum.SUCCESS.getCode().intValue()) {
             return true;
         }

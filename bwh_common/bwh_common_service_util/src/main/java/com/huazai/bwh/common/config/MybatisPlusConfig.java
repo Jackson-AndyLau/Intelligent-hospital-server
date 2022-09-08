@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement //开启事务处理
 @Configuration
-@MapperScan("com.huazai.bwh.*.mapper")
+@MapperScan(basePackages = "com.huazai.bwh.*.mapper")
 public class MybatisPlusConfig {
 
 

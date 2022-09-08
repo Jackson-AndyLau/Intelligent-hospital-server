@@ -44,6 +44,20 @@ public class Swagger2Config {
 
     }
 
+
+    @Bean
+    public Docket hospitalApiConfig() {
+
+        return new Docket(DocumentationType.SWAGGER_2)
+                .groupName("hospitalApi")
+                .apiInfo(hospitalApiInfo())
+                .select()
+                //只显示admin路径下的页面
+                .paths(Predicates.and(PathSelectors.regex("/hospital/.*")))
+                .build();
+
+    }
+
     private ApiInfo webApiInfo() {
 
         return new ApiInfoBuilder()
@@ -59,6 +73,16 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("后台管理系统-API文档")
                 .description("本文档描述了后台管理系统微服务接口定义")
+                .version("1.0-SNAPSHOT")
+                .contact(new Contact("Intelligent_hospital", "http://api.java98k.vip", "who.seek.me@java98k.vip"))
+                .build();
+    }
+
+    private ApiInfo hospitalApiInfo() {
+
+        return new ApiInfoBuilder()
+                .title("智慧医院管理系统-API文档")
+                .description("本文档描述了智慧医院管理系统微服务接口定义")
                 .version("1.0-SNAPSHOT")
                 .contact(new Contact("Intelligent_hospital", "http://api.java98k.vip", "who.seek.me@java98k.vip"))
                 .build();

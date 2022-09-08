@@ -1,6 +1,6 @@
 package com.huazai.bwh.common.exception;
 
-import com.huazai.bwh.common.result.Result;
+import com.huazai.bwh.common.result.JSONResult;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,15 +10,15 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public Result error(Exception e) {
+    public JSONResult error(Exception e) {
         e.printStackTrace();
-        return Result.fail();
+        return JSONResult.failure();
     }
 
     @ExceptionHandler(BwhException.class)
     @ResponseBody
-    public Result error(BwhException e) {
+    public JSONResult error(BwhException e) {
         e.printStackTrace();
-        return Result.fail();
+        return JSONResult.failure();
     }
 }

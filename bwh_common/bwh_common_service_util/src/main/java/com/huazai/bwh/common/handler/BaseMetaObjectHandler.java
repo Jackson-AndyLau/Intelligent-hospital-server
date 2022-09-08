@@ -28,4 +28,6 @@ public class BaseMetaObjectHandler implements MetaObjectHandler {
         // 新增对象的时候需要自动填充的字段
         this.setFieldValByName("updateTime", new Date(), metaObject);
     }
+
+
 }
