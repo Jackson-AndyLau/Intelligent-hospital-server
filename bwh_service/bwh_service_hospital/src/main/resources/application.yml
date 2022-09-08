@@ -14,7 +14,8 @@ spring:
   # mysql数据库连接
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.190.129:3306/bwh_hospital?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&useSSL=false
+#    url: jdbc:mysql://192.168.190.129:3306/bwh_hospital?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://192.168.137.128:3306/bwh_hospital?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: 123456
   #返回json的全局时间格式
