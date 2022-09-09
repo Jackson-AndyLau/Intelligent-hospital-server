@@ -46,7 +46,7 @@ spring:
 
 #配置mapper xml文件的路径
 mybatis-plus:
-  mapper-locations: classpath:com/atguigu/yygh/mapper/xml/*.xml
+  mapper-locations: classpath:mapper/xml/*.xml
 
 #开启sentinel
 feign:
