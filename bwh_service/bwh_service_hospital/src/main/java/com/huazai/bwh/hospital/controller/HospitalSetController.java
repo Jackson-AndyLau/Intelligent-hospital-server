@@ -28,6 +28,7 @@ import io.swagger.annotations.*;
  * @version V1.1.0
  */
 @Slf4j
+@CrossOrigin
 @RestController
 @Api(value = "HospitalSetEntity 控制器")
 @RequestMapping("/hospital/hospitalSet")
